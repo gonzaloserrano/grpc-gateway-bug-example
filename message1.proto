@@ -1,0 +1,5 @@
+syntax = "proto3";
+package your.message1.v1;
+option go_package = "github.com/yourorg/yourprotos/gen/go/your/message1/v1";
+
+message Message1 { string value = 1; }

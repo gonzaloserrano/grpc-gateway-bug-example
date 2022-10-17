@@ -1,0 +1,15 @@
+syntax = "proto3";
+package your.service.v1;
+option go_package = "github.com/yourorg/yourprotos/gen/go/your/service/v1";
+
+import "message1.proto";
+import "message2.proto";
+import "message3.proto";
+
+message Empty {}
+
+service YourService {
+  rpc Do1(your.message1.v1.Message1) returns (Empty) {}
+  rpc Do2(your.message2.v1.Message2) returns (Empty) {}
+  rpc Do3(your.message3.v1.Message3) returns (Empty) {}
+}
